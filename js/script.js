@@ -1,4 +1,5 @@
-var colors = generatRandomColor(12);
+var numOfSquer = 12;
+var colors = generatRandomColor(numOfSquer);
 var squer = document.querySelectorAll('.squer');
 var pickedColor = randomColor();
 var colorDisplay = document.getElementById('colorDisplay')
@@ -56,36 +57,20 @@ for (var i = 0; i < squer.length; i++) {
 
     });
 }
-
 resetbtn.addEventListener('click', function() {
-     messageDisplay.textContent = '';
-    headContainer.style.display = 'block';
-     headContainer.style.backgroundColor ='#aaa';
     // var clickedColor = sqeur[i].style.backgroundColor;
-    expertDisplay.style.display = 'none';
-    allExpertElements.style.display = 'none';
-    allColorsquers.style.display = 'block';
+    callable();
     messageDisplay.textContent = '';
-    colors = generatRandomColor(12);
-    pickedColor = randomColor();
-    colorDisplay.textContent = pickedColor;
     resetbtn.textContent = 'New Color'
     for (var i = 0; i < squer.length; i++) {
         squer[i].style.backgroundColor = colors[i];
-        squer[i].style.display = 'block';
+        // squer[i].style.display = 'block';
     }
 });
 easyMode.addEventListener('click', function() {
-    messageDisplay.textContent = '';
-    reset.style.display = 'inline-block';
-    headContainer.style.backgroundColor ='#aaa';
-    headContainer.style.display = 'block';
-    expertDisplay.style.display = 'none';
-    allExpertElements.style.display = 'none';
-    allColorsquers.style.display = 'block';
-    colors = generatRandomColor(8);
-    pickedColor = randomColor();
-    colorDisplay.textContent = pickedColor;
+    numOfSquer = 8;
+    callable();
+    
     for (var i = 0; i < squer.length; i++) {
         if (colors[i]) {
             squer[i].style.backgroundColor = colors[i];
@@ -93,19 +78,13 @@ easyMode.addEventListener('click', function() {
             squer[i].style.display = 'none';
         }
     }
+    reset.style.display = 'inline-block';
 });
 
 hardMode.addEventListener('click', function() {
-    messageDisplay.textContent = '';
+    numOfSquer = 12;
+    callable();
     reset.style.display = 'inline-block';
-    headContainer.style.backgroundColor ='#aaa';
-    headContainer.style.display = 'block';
-    expertDisplay.style.display = 'none';
-    allExpertElements.style.display = 'none';
-    allColorsquers.style.display = 'block';
-    colors = generatRandomColor(12);
-    pickedColor = randomColor();
-    colorDisplay.textContent = pickedColor;
     for (var i = 0; i < squer.length; i++) {
         squer[i].style.backgroundColor = colors[i];
         squer[i].style.display = 'block';
@@ -113,7 +92,7 @@ hardMode.addEventListener('click', function() {
 });
 expertMode.addEventListener('click', function() {
     console.log("firing expertmode event handler");
-    headOne.textContent = 'Type The Three Channal Value In The Box Below to represent the color shown'
+    headOne.textContent = 'Type The Three Channal Values In The Box Below to represent the color shown'
     messageDisplay.textContent = '';
     headContainer.style.backgroundColor ='#aaa';
     reset.style.display = 'none';
@@ -158,36 +137,19 @@ greenbtn.addEventListener('click', function() {
             guesedColor.style.backgroundColor = rgbExpert();
         }
     });
+function callable(){
+    colors = generatRandomColor(numOfSquer);
+    messageDisplay.textContent = '';
+    headContainer.style.display = 'block';
+    headContainer.style.backgroundColor ='#aaa';
+    expertDisplay.style.display = 'none';
+    allColorsquers.style.display = 'block';
+    allExpertElements.style.display = 'none';
+    pickedColor = randomColor();
+    headOne.textContent = 'Guese Which Color This '+ pickedColor +' Represent' ;
+    colorDisplay.textContent = pickedColor;
+}
 
-// redbtn.addEventListener('click', function() {
-//     redValue = inputred.value;
-//     if (redValue > 0 && redValue < 256) {
-//         console.log(redValue);
-//     } else {
-//         console.log('please Enter only numerical value');
-//     }
-
-//     inputred.value = '';
-// });
-// greenbtn.addEventListener('click', function() {
-
-//     redValue = inputred.value;
-//     greenValue = inputgreen.value;
-//     blueValue = inputblue.value;
-//     inputgreen.value = '';
-//     inputblue.value = '';
-//     inputred.value = '';
-//     if(pickedColor === rgbExpert()){
-//         console.log("you are correct");
-//     }else{
-//         console.log("You are Wrong");
-//     }
-// });
-// bluebtn.addEventListener('click', function() {
-//     blueValue = inputblue.value;
-//     console.log(blueValue);
-//     inputblue.value = '';
-// });
 function rgbExpert(){
  return 'rgb('+redValue+', '+greenValue+', '+blueValue+')';
 }
