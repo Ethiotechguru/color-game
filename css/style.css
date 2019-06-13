@@ -8,6 +8,9 @@ body {
 .containAllElements {
     max-height: 600px;
 }
+.headOne{
+    text-transform: uppercase;
+}
 
 .colorSquer {
     width: 100px;

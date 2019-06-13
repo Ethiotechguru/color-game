@@ -1,7 +1,7 @@
 var numOfSquer = 12;
 var colors = generatRandomColor(numOfSquer);
-var squer = document.querySelectorAll('.squer');
 var pickedColor = randomColor();
+var squer = document.querySelectorAll('.squer');
 var colorDisplay = document.getElementById('colorDisplay')
 var messageDisplay = document.getElementById('message');
 var resetbtn = document.querySelector('.reset');
@@ -41,8 +41,8 @@ for (var i = 0; i < squer.length; i++) {
         //extract clicked quer background color
         var clickedColor = this.style.backgroundColor;
         if (clickedColor === pickedColor) {
-            messageDisplay.style.color = 'green';
             messageDisplay.style.textShadow = '3px 3px white';
+            messageDisplay.style.color = 'green';
             messageDisplay.textContent = 'Correct';
             changeColor();
             resetbtn.textContent = 'Play Again';
@@ -59,7 +59,7 @@ for (var i = 0; i < squer.length; i++) {
 }
 resetbtn.addEventListener('click', function() {
     // var clickedColor = sqeur[i].style.backgroundColor;
-    callable();
+    refactored();
     messageDisplay.textContent = '';
     resetbtn.textContent = 'New Color'
     for (var i = 0; i < squer.length; i++) {
@@ -69,7 +69,7 @@ resetbtn.addEventListener('click', function() {
 });
 easyMode.addEventListener('click', function() {
     numOfSquer = 8;
-    callable();
+    refactored();
     
     for (var i = 0; i < squer.length; i++) {
         if (colors[i]) {
@@ -83,7 +83,7 @@ easyMode.addEventListener('click', function() {
 
 hardMode.addEventListener('click', function() {
     numOfSquer = 12;
-    callable();
+    refactored();
     reset.style.display = 'inline-block';
     for (var i = 0; i < squer.length; i++) {
         squer[i].style.backgroundColor = colors[i];
@@ -137,7 +137,7 @@ greenbtn.addEventListener('click', function() {
             guesedColor.style.backgroundColor = rgbExpert();
         }
     });
-function callable(){
+function refactored(){
     colors = generatRandomColor(numOfSquer);
     messageDisplay.textContent = '';
     headContainer.style.display = 'block';
@@ -154,7 +154,7 @@ function rgbExpert(){
  return 'rgb('+redValue+', '+greenValue+', '+blueValue+')';
 }
 
-function changeColor(color) {
+function changeColor(color){
     //loop through all speur
     for (var i = 0; i < squer.length; i++) {
         squer[i].style.backgroundColor = pickedColor;
