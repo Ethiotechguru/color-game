@@ -1,0 +1,179 @@
+body {
+    background-color:#aaa;
+    color: white;
+    max-width: 100%;
+    box-sizing: content-box;
+}
+
+.containAllElements {
+    max-height: 600px;
+}
+
+.colorSquer {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: purple;
+}
+
+.expertDisplay {
+    max-width: = 600px;
+    margin: 30px;
+    text-align: center;
+}
+
+.squer {
+    width: 20%;
+    padding-bottom: 20%;
+    background-color: red;
+    margin: 10px;
+    float: left;
+    border-radius: 50%;
+    /* box-shadow: 10px 10px #eee;*/
+
+}
+
+#message {
+    text-align: center;
+    font-size: 60px;
+}
+
+.checkMessage {
+    max-width: 900px;
+    font-size: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#container {
+    max-width: 400px;
+    margin: 0 auto;
+
+}
+
+h1 {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.btnCont {
+    clear: both;
+    text-align: center;
+
+}
+
+span {
+    color: white;
+}
+
+.button {
+    width: 250px;
+    padding: 20px;
+    margin: 50px 10px 0 10px;
+    font-size: 15px;
+    outline: none;
+    background: #cccccc;
+    background: -moz-linear-gradient(top, #cccccc 0%, #303030 12%, #666666 32%, #666666 32%, #c4c4c4 47%, #f7f7f7 56%, #e0e0e0 59%, #ededed 72%, #a0a0a0 82%, #141414 91%, #161616 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #cccccc 0%, #303030 12%, #666666 32%, #666666 32%, #c4c4c4 47%, #f7f7f7 56%, #e0e0e0 59%, #ededed 72%, #a0a0a0 82%, #141414 91%, #161616 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #cccccc 0%, #303030 12%, #666666 32%, #666666 32%, #c4c4c4 47%, #f7f7f7 56%, #e0e0e0 59%, #ededed 72%, #a0a0a0 82%, #141414 91%, #161616 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#161616', GradientType=0);
+    /* IE6-9 */
+
+}
+
+.reset {
+    border-radius: 20px;
+    font-size: 30px;
+    padding: 20px;
+}
+
+.headContainer {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.hardMode {
+    margin-left: 10px;
+    box-shadow: 3px 3px #aaa;
+    /*border-top-left-radius: 20px;*/
+}
+
+.easyMode {
+    border-radius: 20px 0 0 20px;
+    margin-left: 10px;
+    box-shadow: -5px 5px #aaa;
+    /*border-top-left-radius: 20px;*/
+}
+
+.expertMode {
+    border-radius: 0 20px 20px 0;
+    box-shadow: 5px 5px #ccc;
+}
+
+.inputcolor {
+    font-size: 20px;
+    width: 150px;
+}
+
+.inputcolor,
+.btntext {
+    text-align: center;
+    padding: 15px;
+}
+
+.guesedColor {
+    display: inline-block;
+    width: 200px;
+    height: 200;
+    padding: 40px;
+    background-color: yellow;
+    margin: 0 auto;
+    border-radius: 20px;
+    border: 3px solid white;
+    font-size: 1.5em;
+    text-shadow: 2px 2px black;
+    margin: 20px auto;
+}
+
+.btntext {
+    margin-top: 15px;
+    font-size: 15px;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 3px 3px #bbb;
+    outline: none;
+}
+
+.redbtn {
+
+    background-color: red;
+}
+
+.greenbtn {
+    background-color: green;
+}
+
+.bluebtn {
+    background-color: blue;
+}
+
+
+
+.textareaInput {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.rgbnum {
+    max-width: 900px;
+    margin: 0 auto;
+    clear: both;
+    text-align: center;
+}

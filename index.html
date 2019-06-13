@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Color Game</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+   <!--  <div class="containAllElements"> -->
+        <div class="headContainer">
+            <h2 class="headOne">Guese Which Color This <span id='colorDisplay'>RGB</span> Represent</h2>
+            <div class="checkMessage"><span id='message'></span></div>
+            <button class="reset button">New Game</button>
+        </div>
+        <div class="expertDisplay">
+            <div class="guesedColor">Wrong Color Choice</div>
+            <div class="colorSquer"></div>
+        </div>
+        <div id="container">
+            <div class="squer"></div>
+            <div class="squer"></div>
+            <div class="squer"></div>
+            <div class="squer"></div>
+            <div class="squer"></div>
+            <div class="squer"></div>
+            <div class="squer"></div>
+            <div class="squer"></div>
+            <div class="squer"></div>
+            <div class="squer"></div>
+            <div class="squer"></div>
+            <div class="squer"></div>
+        </div>
+        <div class="allExpertElements">
+            <div class="rgbnum">
+                <input type="number" id="red" class="inputcolor" minlength="1" maxlength="3" placeholder="Red channal" name="">
+                <input type="number" id="green" class="inputcolor" minlength="1" maxlength="3" placeholder="Green channal" name="">
+                <input type="number" id="blue" class="inputcolor" minlength="1" maxlength="3" placeholder="Blue channal" name="">
+            </div>
+            <div class="textareaInput">
+                <!-- <button class="btntext redbtn">Enter Red Channal</button> -->
+                <button class="btntext greenbtn">Enter Green Channal</button>
+                <!--   <button class="btntext bluebtn">Enter Blue Channal</button> -->
+            </div>
+        </div>
+        <div class="btnCont">
+            <button id="easyMode" class="easyMode button">Easy Mode</button>
+            <button id="hardMode" class="hardMode button">Hard Mode</button>
+            <button id="expertMode" class="expertMode button">RGB Expert</button>
+        </div>
+   <!--  </div> -->
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>
