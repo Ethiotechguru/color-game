@@ -24,7 +24,7 @@ var headOne = document.querySelector('.headOne');
 var reset = document.querySelector('.reset');
 var items = document.querySelectorAll('.item');
 var randomWinMessege = [
-    'You Got It. Nice Work!', 
+    'You Got It. Nice Work!',
     'Wow Right On The Spot. Congrats!',
     'Great You are Getting The Secret of RGBs! Congrats',
     'Wonderfull You Must know a lot about RGBs!',
@@ -47,7 +47,7 @@ for (var i = 0; i < squer.length; i++) {
     //add color to squers
     squer[i].style.backgroundColor = colors[i];
     //add event listner to each squer
-    squer[i].addEventListener('click', function() {
+    squer[i].addEventListener('click', function () {
         //extract clicked quer background color
         var clickedColor = this.style.backgroundColor;
         if (clickedColor === pickedColor) {
@@ -67,7 +67,7 @@ for (var i = 0; i < squer.length; i++) {
 
     });
 }
-resetbtn.addEventListener('click', function() {
+resetbtn.addEventListener('click', function () {
     // var clickedColor = sqeur[i].style.backgroundColor;
     refactored();
     messageDisplay.textContent = '';
@@ -77,10 +77,10 @@ resetbtn.addEventListener('click', function() {
         // squer[i].style.display = 'block';
     }
 });
-easyMode.addEventListener('click', function() {
+easyMode.addEventListener('click', function () {
     numOfSquer = 8;
     refactored();
-    
+
     for (var i = 0; i < squer.length; i++) {
         if (colors[i]) {
             squer[i].style.backgroundColor = colors[i];
@@ -91,7 +91,7 @@ easyMode.addEventListener('click', function() {
     reset.style.display = 'inline-block';
 });
 
-hardMode.addEventListener('click', function() {
+hardMode.addEventListener('click', function () {
     numOfSquer = 12;
     refactored();
     reset.style.display = 'inline-block';
@@ -100,94 +100,94 @@ hardMode.addEventListener('click', function() {
         squer[i].style.display = 'block';
     }
 });
-expertMode.addEventListener('click', function() {
+expertMode.addEventListener('click', function () {
     randomMessege();
     console.log("firing expertmode event handler");
     headOne.textContent = 'Type The Three Channal Values In The Box Below to represent the color shown'
     messageDisplay.textContent = '';
-    headContainer.style.backgroundColor ='#aaa';
+    headContainer.style.backgroundColor = '#aaa';
     reset.style.display = 'none';
-     guesedColor.style.display = 'none';
+    guesedColor.style.display = 'none';
     pickedColor = randomColor();
     headContainer.style.display = 'block';
     colorDisplay.textContent = '';
     colorSquer.style.backgroundColor = pickedColor;
-    
+
     expertDisplay.style.display = 'block';
     allExpertElements.style.display = 'block';
     allColorsquers.style.display = 'none';
     expertMode.textContent = 'RGB Expert';
 
 });
-greenbtn.addEventListener('click', function() {
-        guesedColor.style.display = 'block';
-        redValue = inputred.value;
-        greenValue = inputgreen.value;
-        blueValue = inputblue.value;
-        inputgreen.value = '';
-        inputblue.value = '';
-        inputred.value = '';
-        // rgbExpert(); 
-        if(pickedColor === rgbExpert()){
-            ;
-            console.log("you are correct");
-            guesedColor.textContent = randomMessege() ;
-            guesedColor.style.backgroundColor = rgbExpert();
-        }
-        else if((!redValue)|| (!greenValue) ||(!blueValue)){
-            guesedColor.textContent = "You Must Enter Numerical Value";
-            guesedColor.style.backgroundColor = '#aaa';
-        }
-       else if((redValue < 0 || redValue > 255) || 
-            (greenValue < 0 || greenValue > 255) ||
-            (blueValue < 0 || blueValue > 255)){
-            guesedColor.textContent = "Try Again! Your value must be between 0 and 255";
-            guesedColor.style.backgroundColor = '#aaa';
-        }
-        else {
-            guesedColor.style.backgroundColor = rgbExpert();
-            var colorblue = pickedColor;
-            var arrOfPicked = colorblue.split(', ');
-            console.log(arrOfPicked);
-            console.log(typeof arrOfPicked[2]);
-            console.log("You are Wrong");
-            console.log('this is a red value ' + redValue);
-            console.log('this is a green value ' + greenValue);
-            console.log('this is a blue value ' + greenValue);
-    
-            for (var i = 0; i < arrOfPicked.length; i++) {
-                if (arrOfPicked[1] !== greenValue) {
-                    guesedColor.textContent = 'You chose The Wrong Color! Hint, the Green Channal is ' + arrOfPicked[1];
-                } else if (arrOfPicked[2] !== blueValue +')') {
-                    guesedColor.textContent = 'You chose The Wrong Color! Hint, The Blue Channal is ' + arrOfPicked[2];
-                } else if(arrOfPicked[0] !== 'rgb('+redValue) {
-                    guesedColor.textContent = 'You Chose The Wrong color! Try '+ pickedColor;
-                }
-    
+greenbtn.addEventListener('click', function () {
+    guesedColor.style.display = 'block';
+    redValue = inputred.value;
+    greenValue = inputgreen.value;
+    blueValue = inputblue.value;
+    inputgreen.value = '';
+    inputblue.value = '';
+    inputred.value = '';
+    // rgbExpert(); 
+    if (pickedColor === rgbExpert()) {
+        ;
+        console.log("you are correct");
+        guesedColor.textContent = randomMessege();
+        guesedColor.style.backgroundColor = rgbExpert();
+    }
+    else if ((!redValue) || (!greenValue) || (!blueValue)) {
+        guesedColor.textContent = "You Must Enter Numerical Value";
+        guesedColor.style.backgroundColor = '#aaa';
+    }
+    else if ((redValue < 0 || redValue > 255) ||
+        (greenValue < 0 || greenValue > 255) ||
+        (blueValue < 0 || blueValue > 255)) {
+        guesedColor.textContent = "Try Again! Your value must be between 0 and 255";
+        guesedColor.style.backgroundColor = '#aaa';
+    }
+    else {
+        guesedColor.style.backgroundColor = rgbExpert();
+        var colorblue = pickedColor;
+        var arrOfPicked = colorblue.split(', ');
+        console.log(arrOfPicked);
+        console.log(typeof arrOfPicked[2]);
+        console.log("You are Wrong");
+        console.log('this is a red value ' + redValue);
+        console.log('this is a green value ' + greenValue);
+        console.log('this is a blue value ' + greenValue);
+
+        for (var i = 0; i < arrOfPicked.length; i++) {
+            if (arrOfPicked[1] !== greenValue) {
+                guesedColor.textContent = 'You chose The Wrong Color! Hint, the Green Channal is ' + arrOfPicked[1];
+            } else if (arrOfPicked[2] !== blueValue + ')') {
+                guesedColor.textContent = 'You chose The Wrong Color! Hint, The Blue Channal is ' + arrOfPicked[2];
+            } else if (arrOfPicked[0] !== 'rgb(' + redValue) {
+                guesedColor.textContent = 'You Chose The Wrong color! Try ' + pickedColor;
             }
+
         }
-        expertMode.textContent = 'Play Again';
-    });
-function refactored(){
-    
+    }
+    expertMode.textContent = 'Play Again';
+});
+function refactored() {
+
     colors = generatRandomColor(numOfSquer);
     messageDisplay.textContent = '';
     headContainer.style.display = 'block';
-    headContainer.style.backgroundColor ='#aaa';
+    headContainer.style.backgroundColor = '#aaa';
     expertDisplay.style.display = 'none';
     allColorsquers.style.display = 'block';
     allExpertElements.style.display = 'none';
     pickedColor = randomColor();
-    headOne.textContent = 'Guese Which Color This '+ pickedColor +' Represent' ;
+    headOne.textContent = 'Guese Which Color This ' + pickedColor + ' Represent';
     colorDisplay.textContent = pickedColor;
     titleColor();
 }
 
-function rgbExpert(){
- return 'rgb('+redValue+', '+greenValue+', '+blueValue+')';
+function rgbExpert() {
+    return 'rgb(' + redValue + ', ' + greenValue + ', ' + blueValue + ')';
 }
 
-function changeColor(color){
+function changeColor(color) {
     //loop through all speur
     for (var i = 0; i < squer.length; i++) {
         squer[i].style.backgroundColor = pickedColor;
@@ -200,7 +200,7 @@ function randomColor() {
     // console.log(genColor);
 }
 
-function randomMessege(){
+function randomMessege() {
     var genMes = Math.floor(Math.random() * randomWinMessege.length);
     return randomWinMessege[genMes];
 }
@@ -219,8 +219,8 @@ function generatRandomColor(num) {
     }
     return arr;
 }
-function titleColor(){
-    for(var i = 0; i<items.length; i++){
-    items[i].style.color = colors[i];
+function titleColor() {
+    for (var i = 0; i < items.length; i++) {
+        items[i].style.color = colors[i];
     }
 }
