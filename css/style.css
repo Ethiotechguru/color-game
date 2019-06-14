@@ -1,5 +1,5 @@
 body {
-    background-color:#aaa;
+    background-color:black;/*#aaa*/
     color: white;
     max-width: 100%;
     box-sizing: content-box;
@@ -13,10 +13,15 @@ body {
 }
 
 .colorSquer {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     margin: 0 auto;
     background-color: purple;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 
 .expertDisplay {
@@ -56,8 +61,14 @@ body {
 
 h1 {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 20px auto;
+    text-align: center;
 }
+.item6{
+    padding: 7px;
+}
+.item1{color: rgb(213, 114, 38);}.item2{color:rgb(11, 132, 165);}.item3{color: rgb(201, 206, 19);}.item4{color: rgb(11, 132, 165);}.item5{color: rgb(213, 114, 38)}.item7{color: rgb(154, 31, 152)}.item8{color: rgb(44, 206, 19)}.item9{color: rgb(218, 63, 174)}.item10{color: rgb(233, 34, 104)}
+
 
 .btnCont {
     clear: both;
@@ -96,9 +107,11 @@ span {
 .headContainer {
     text-align: center;
     margin: 40px auto;
+    background-color: #aaa;
     max-width: 600px;
     padding: 20px;
     border-radius: 20px;
+    border: 3px solid #aaa;
 }
 
 .hardMode {
@@ -142,6 +155,7 @@ span {
     font-size: 1.5em;
     text-shadow: 2px 2px black;
     margin: 20px auto;
+    text-transform: uppercase;
 }
 
 .btntext {
@@ -153,20 +167,15 @@ span {
     outline: none;
 }
 
-.redbtn {
-
-    background-color: red;
-}
 
 .greenbtn {
-    background-color: green;
+    font-size: 1.5em;
+    color:white;
+    text-shadow: 3px 3px black;
+    background-image: linear-gradient(to right, red, green, blue);
+    box-shadow: 5px 5px black;
+    /* background-color: green; */
 }
-
-.bluebtn {
-    background-color: blue;
-}
-
-
 
 .textareaInput {
     max-width: 900px;
@@ -179,4 +188,81 @@ span {
     margin: 0 auto;
     clear: both;
     text-align: center;
+}
+@media (max-width: 600px) {
+    body{
+        border: 5px solid white;
+        border-radius:20px;
+        padding-bottom: 100px;
+        -webkit-border-radius:20px;
+        -moz-border-radius:20px;
+        -ms-border-radius:20px;
+        -o-border-radius:20px;
+}
+.colorSquer {
+    width: 200px;
+    height: 150px;
+}
+    .button {
+        width: 100px;
+        padding: 10px;
+        margin: 30px 10px 0 10px;
+        font-size: 15px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+}
+
+.guesedColor {
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    font-size: 20px;
+}
+body{
+    background-color: black;
+}
+#container {
+    max-width: 350px;
+    margin: 0 auto;
+}
+.squer {
+    width: 15%;
+    padding-bottom: 15%;
+    margin: 10px 0 0 49px;
+}
+    .inputcolor {
+        font-size: 10px;
+        width: 100px;
+        padding: 10px;
+    }
+    h2{
+        font-size: 20px;
+    }
+}
+@media (max-width: 850px) {
+    .button {
+        width: 150px;
+        padding: 10px;
+        margin: 30px 10px 0 10px;
+        font-size: 15px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+}
+}
+@media (max-width:550px){
+    h2{
+        font-size: 17px;
+    }
+    .greenbtn {
+        font-size: 1em;
+        background-image: linear-gradient(to right, red, green, blue);
+        box-shadow: 5px 5px white;
+    }
 }

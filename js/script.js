@@ -22,6 +22,7 @@ var headContainer = document.querySelector('.headContainer');
 var guesedColor = document.querySelector('.guesedColor');
 var headOne = document.querySelector('.headOne');
 var reset = document.querySelector('.reset');
+var items = document.querySelectorAll('.item');
 guesedColor.style.display = 'none';
 var redValue;
 var greenValue;
@@ -31,6 +32,7 @@ allExpertElements.style.display = 'none';
 expertDisplay.style.display = 'none';
 colorDisplay.textContent = pickedColor;
 colorSquer.style.backgroundColor = pickedColor;
+titleColor();
 
 
 for (var i = 0; i < squer.length; i++) {
@@ -105,6 +107,7 @@ expertMode.addEventListener('click', function() {
     expertDisplay.style.display = 'block';
     allExpertElements.style.display = 'block';
     allColorsquers.style.display = 'none';
+    expertMode.textContent = 'RGB Expert';
 
 });
 greenbtn.addEventListener('click', function() {
@@ -131,13 +134,32 @@ greenbtn.addEventListener('click', function() {
             guesedColor.textContent = "Try Again! Your value must be between 0 and 255";
             guesedColor.style.backgroundColor = '#aaa';
         }
-       else{
-            console.log("You are Wrong");
-            guesedColor.textContent = "You chose The Wrong color";
+        else {
             guesedColor.style.backgroundColor = rgbExpert();
+            var colorblue = pickedColor;
+            var arrOfPicked = colorblue.split(', ');
+            console.log(arrOfPicked);
+            console.log(typeof arrOfPicked[2]);
+            console.log("You are Wrong");
+            console.log('this is a red value ' + redValue);
+            console.log('this is a green value ' + greenValue);
+            console.log('this is a blue value ' + greenValue);
+    
+            for (var i = 0; i < arrOfPicked.length; i++) {
+                if (arrOfPicked[1] !== greenValue) {
+                    guesedColor.textContent = 'You chose The Wrong Color! Hint, the Green Channal is ' + arrOfPicked[1];
+                } else if (arrOfPicked[2] !== blueValue +')') {
+                    guesedColor.textContent = 'You chose The Wrong Color! Hint, The Blue Channal is ' + arrOfPicked[2];
+                } else if(arrOfPicked[0] !== 'rgb('+redValue) {
+                    guesedColor.textContent = 'You Chose The Wrong color! Try '+ pickedColor;
+                }
+    
+            }
         }
+        expertMode.textContent = 'Play Again';
     });
 function refactored(){
+    
     colors = generatRandomColor(numOfSquer);
     messageDisplay.textContent = '';
     headContainer.style.display = 'block';
@@ -148,6 +170,7 @@ function refactored(){
     pickedColor = randomColor();
     headOne.textContent = 'Guese Which Color This '+ pickedColor +' Represent' ;
     colorDisplay.textContent = pickedColor;
+    titleColor();
 }
 
 function rgbExpert(){
@@ -172,7 +195,6 @@ function storRandomColor() {
     var g = Math.floor((Math.random() * 256));
     var b = Math.floor((Math.random() * 256));
     return 'rgb(' + r + ', ' + g + ', ' + b + ')';
-
 }
 
 function generatRandomColor(num) {
@@ -181,4 +203,9 @@ function generatRandomColor(num) {
         arr.push(storRandomColor());
     }
     return arr;
+}
+function titleColor(){
+    for(var i = 0; i<items.length; i++){
+    items[i].style.color = colors[i];
+    }
 }
