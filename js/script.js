@@ -23,6 +23,14 @@ var guesedColor = document.querySelector('.guesedColor');
 var headOne = document.querySelector('.headOne');
 var reset = document.querySelector('.reset');
 var items = document.querySelectorAll('.item');
+var randomWinMessege = [
+    'You Got It. Nice Work!', 
+    'Wow Right On The Spot. Congrats!',
+    'Great You are Getting The Secret of RGBs! Congrats',
+    'Wonderfull You Must know a lot about RGBs!',
+    'We have a winner mate! You are becoming an expert!',
+    'Some one is getting good Recognising RGBs! Great Work!',
+];
 guesedColor.style.display = 'none';
 var redValue;
 var greenValue;
@@ -53,7 +61,7 @@ for (var i = 0; i < squer.length; i++) {
         } else {
             messageDisplay.style.color = 'red';
             messageDisplay.style.textShadow = '3px 3px white';
-            this.style.backgroundColor = '#aaa';
+            this.style.backgroundColor = 'black';
             messageDisplay.textContent = 'Try Again';
         }
 
@@ -93,6 +101,7 @@ hardMode.addEventListener('click', function() {
     }
 });
 expertMode.addEventListener('click', function() {
+    randomMessege();
     console.log("firing expertmode event handler");
     headOne.textContent = 'Type The Three Channal Values In The Box Below to represent the color shown'
     messageDisplay.textContent = '';
@@ -120,8 +129,9 @@ greenbtn.addEventListener('click', function() {
         inputred.value = '';
         // rgbExpert(); 
         if(pickedColor === rgbExpert()){
+            ;
             console.log("you are correct");
-            guesedColor.textContent = "Congratulations You are Correct"
+            guesedColor.textContent = randomMessege() ;
             guesedColor.style.backgroundColor = rgbExpert();
         }
         else if((!redValue)|| (!greenValue) ||(!blueValue)){
@@ -188,6 +198,11 @@ function randomColor() {
     var genColor = Math.floor(Math.random() * colors.length);
     return colors[genColor];
     // console.log(genColor);
+}
+
+function randomMessege(){
+    var genMes = Math.floor(Math.random() * randomWinMessege.length);
+    return randomWinMessege[genMes];
 }
 
 function storRandomColor() {

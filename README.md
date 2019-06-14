@@ -6,7 +6,7 @@ The first step I took to build this game was to get set up the main component of
 
 This game will have three levels to challenge the player. The first step will contain 9 circle each with different color
 which are generated randomly using the rgb values (0-255). the player will click on the circle until the clicked color is matched
-the displied rgb(values). when the player clicked the correct color, all 8 circle will change to the picked color and the player
+the displyed rgb(values). when the player clicked the correct color, all 8 circle will change to the picked color and the player
 will be prompted to play the game again or move to the next level.
 the second level will have 12 circle with 12 shade of colors and the player will be challenged to play the same way. 
 the third and the last level shows only one color which is randomly generated and the player will be prompted to input the
@@ -14,3 +14,8 @@ rgb numerical value to match the color displayed. if the player missed on first 
 rgb value and prompted to try again. if the player did not get it on the second try, they will be provided the second channel
 value and prompted to try the third time. if the player still not able to get the correct values, the rgb(value) for all
 three channel will be displayed on the screen and the player will be given a chance to enter the given value.
+## Technology Used
+html, css and Javascript.
+
+## site I used to help me build this game
+mdn, stack over flow, w3 school, Udacity, Medium.com and lots of web site i don't remember.
