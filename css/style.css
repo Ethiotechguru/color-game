@@ -63,6 +63,7 @@ h1 {
     max-width: 600px;
     margin: 20px auto;
     text-align: center;
+    font-size: 4em;
 }
 .item6{
     padding: 7px;
@@ -254,6 +255,9 @@ body{
         -moz-border-radius: 10px;
         -ms-border-radius: 10px;
         -o-border-radius: 10px;
+}
+h1 {
+    font-size: 2em;
 }
 }
 @media (max-width:550px){
