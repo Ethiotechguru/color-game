@@ -24,6 +24,7 @@
     var headOne = document.querySelector('.headOne');
     var reset = document.querySelector('.reset');
     var items = document.querySelectorAll('.item');
+    var spanMessege = document.querySelector('.spanMessege');
     var randomWinMessege = [
         'You Got It. Nice Work!',
         'Wow Right On The Spot. Congrats!',
@@ -74,11 +75,13 @@
         messageDisplay.textContent = '';
         easyHard.style.display = 'block';
         resetbtn.textContent = 'New Color'
+        expertMode.textContent = 'RGB Expert';
         for (var i = 0; i < squer.length; i++) {
             squer[i].style.backgroundColor = colors[i];
             
             // squer[i].style.display = 'block';
         }
+        
     });
     easyMode.addEventListener('click', function () {
         headOne.style.display = 'none';
@@ -93,6 +96,7 @@
             }
             
         }
+        expertMode.textContent = 'RGB Expert';
         reset.style.display = 'inline-block';
     });
 
@@ -106,8 +110,10 @@
             squer[i].style.backgroundColor = colors[i];
             squer[i].style.display = 'block';
         }
+        expertMode.textContent = 'RGB Expert';
     });
     expertMode.addEventListener('click', function () {
+        spanMessege.textContent = '';
         easyHard.style.display = 'none';
         headOne.style.display = 'block';
         randomMessege();
@@ -134,23 +140,28 @@
         inputred.value = '';
         // rgbExpert(); 
         if (pickedColor === rgbExpert()) {
+            headContainer.style.backgroundColor = pickedColor;
             guesedColor.textContent = randomMessege();
             guesedColor.style.backgroundColor = rgbExpert();
+            spanMessege.textContent = 'Matching RGB Values are Found';
         }
         else if ((!redValue) || (!greenValue) || (!blueValue)) {
             guesedColor.textContent = "You Must Enter Numerical Value";
             guesedColor.style.backgroundColor = '#aaa';
+            headContainer.style.backgroundColor ='#aaa';
         }
         else if ((redValue < 0 || redValue > 255) ||
             (greenValue < 0 || greenValue > 255) ||
             (blueValue < 0 || blueValue > 255)) {
             guesedColor.textContent = "Try Again! Your value must be between 0 and 255";
             guesedColor.style.backgroundColor = '#aaa';
+            headContainer.style.backgroundColor ='#aaa';
         }
         else {
             guesedColor.style.backgroundColor = rgbExpert();
             var colorblue = pickedColor;
             var arrOfPicked = colorblue.split(', ');
+            headContainer.style.backgroundColor ='#aaa';
             for (var i = 0; i < arrOfPicked.length; i++) {
                 if (arrOfPicked[1] !== greenValue) {
                     guesedColor.textContent = 'You chose The Wrong Color! Hint, the Green Channal is ' + arrOfPicked[1];

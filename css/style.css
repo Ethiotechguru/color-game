@@ -74,6 +74,7 @@ body {
 }
 
 #message {
+    font-family: 'Roboto', sans-serif;
     text-align: center;
     font-size : 60px;
 }
@@ -154,7 +155,7 @@ span {
     width     : 250px;
     padding   : 20px;
     margin    : 50px 10px 0 10px;
-    font-size : 15px;
+    font-size : 25px;
     outline   : none;
     background: #cccccc;
     background: -moz-linear-gradient(top, #cccccc 0%, #303030 12%, #666666 32%, #666666 32%, #c4c4c4 47%, #f7f7f7 56%, #e0e0e0 59%, #ededed 72%, #a0a0a0 82%, #141414 91%, #161616 100%);
@@ -209,10 +210,7 @@ span {
     text-align: center;
 }
 
-.btntext {
-    text-align: center;
-    padding   : 15px;
-}
+
 
 .guesedColor {
     display         : inline-block;
@@ -232,15 +230,17 @@ span {
 .btntext {
     margin-top   : 15px;
     font-size    : 15px;
-    width        : 200px;
+    width        : 400px;
     border-radius: 10px;
     box-shadow   : 3px 3px #bbb;
+    text-align: center;
+    padding   : 25px;
     outline      : none;
 }
 
 
 .greenbtn {
-    font-size          : 1.5em;
+    font-size          : 1.8em;
     color              : white;
     text-shadow        : 3px 3px black;
     background-image   : linear-gradient(to right, red, green, blue);
