@@ -32,6 +32,12 @@
         'Wonderfull You Must know a lot about RGBs!',
         'We have a winner mate! You are becoming an expert!',
         'Some one is getting good Recognising RGBs! Great Work!',
+        'How did you get so good at this? You keep winning!',
+        'Winners are always winners! You are the One',
+        'You kept Impressing Evry one with your RGB skills',
+        'Did you Invent RGB Your self, how are you keep getting the right answer?',
+        'Winner Winner Winner You are',
+        'You are The One!'
     ];
     headOne.style.display = 'none';
     guesedColor.style.display = 'none';
@@ -142,7 +148,7 @@
         inputred.value = '';
         // rgbExpert(); 
         if (pickedColor === rgbExpert()) {
-            headOne.textContent = '';
+            headOne.textContent = 'Click  "Play Again" to play again';
             headContainer.style.backgroundColor = pickedColor;
             guesedColor.textContent = randomMessege();
             guesedColor.style.backgroundColor = rgbExpert();
@@ -150,6 +156,7 @@
 
         }
         else if ((!redValue) || (!greenValue) || (!blueValue)) {
+            headOne.textContent = 'Type The Three Channal Values In The Box Below to represent the color shown';
             guesedColor.textContent = "You Must Enter Numerical Value";
             guesedColor.style.backgroundColor = '#aaa';
             headContainer.style.backgroundColor ='#aaa';
@@ -158,12 +165,14 @@
         else if ((redValue < 0 || redValue > 255) ||
             (greenValue < 0 || greenValue > 255) ||
             (blueValue < 0 || blueValue > 255)) {
+            headOne.textContent = 'Type The Three Channal Values In The Box Below to represent the color shown';
             guesedColor.textContent = "Try Again! Your value must be between 0 and 255";
             guesedColor.style.backgroundColor = '#aaa';
             headContainer.style.backgroundColor ='#aaa';
             spanMessege.textContent = 'GUESS THIS COLOR\'S RGB VALUE';
         }
         else {
+            headOne.textContent = 'Type The Three Channal Values In The Box Below to represent the color shown';
             guesedColor.style.backgroundColor = rgbExpert();
             var colorblue = pickedColor;
             spanMessege.textContent = 'GUESS THIS COLOR\'S RGB VALUE';
