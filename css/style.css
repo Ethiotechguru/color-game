@@ -31,6 +31,7 @@ body {
     word-spacing: 10px;
     text-shadow: 3px 3px black;
     line-break: auto; 
+    padding: 50px 0 50px 0;
 }
 .easyHard{
     font-size: 40px;

@@ -113,7 +113,8 @@
         expertMode.textContent = 'RGB Expert';
     });
     expertMode.addEventListener('click', function () {
-        spanMessege.textContent = '';
+        headOne.textContent = 'Type The Three Channal Values In The Box Below to represent the color shown';
+        spanMessege.textContent = 'GUESS THIS COLOR\'S RGB VALUE';
         easyHard.style.display = 'none';
         headOne.style.display = 'block';
         randomMessege();
@@ -131,6 +132,7 @@
         expertMode.textContent = 'New Color';
     });
     greenbtn.addEventListener('click', function () {
+        var count = 0;
         guesedColor.style.display = 'block';
         redValue = inputred.value;
         greenValue = inputgreen.value;
@@ -140,15 +142,18 @@
         inputred.value = '';
         // rgbExpert(); 
         if (pickedColor === rgbExpert()) {
+            headOne.textContent = '';
             headContainer.style.backgroundColor = pickedColor;
             guesedColor.textContent = randomMessege();
             guesedColor.style.backgroundColor = rgbExpert();
-            spanMessege.textContent = 'Matching RGB Values are Found';
+            spanMessege.textContent = 'Matching RGB Values are Found Click "Play Again"';
+
         }
         else if ((!redValue) || (!greenValue) || (!blueValue)) {
             guesedColor.textContent = "You Must Enter Numerical Value";
             guesedColor.style.backgroundColor = '#aaa';
             headContainer.style.backgroundColor ='#aaa';
+            spanMessege.textContent = 'GUESS THIS COLOR\'S RGB VALUE';
         }
         else if ((redValue < 0 || redValue > 255) ||
             (greenValue < 0 || greenValue > 255) ||
@@ -156,10 +161,12 @@
             guesedColor.textContent = "Try Again! Your value must be between 0 and 255";
             guesedColor.style.backgroundColor = '#aaa';
             headContainer.style.backgroundColor ='#aaa';
+            spanMessege.textContent = 'GUESS THIS COLOR\'S RGB VALUE';
         }
         else {
             guesedColor.style.backgroundColor = rgbExpert();
             var colorblue = pickedColor;
+            spanMessege.textContent = 'GUESS THIS COLOR\'S RGB VALUE';
             var arrOfPicked = colorblue.split(', ');
             headContainer.style.backgroundColor ='#aaa';
             for (var i = 0; i < arrOfPicked.length; i++) {
@@ -229,3 +236,8 @@
             items[i].style.color = colors[i];
         }
     }
+
+    // function clickCount(){
+    //     var count = 0;
+        
+    // }
