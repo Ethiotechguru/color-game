@@ -8,6 +8,7 @@ var resetbtn = document.querySelector('.reset');
 var expertMode = document.getElementById('expertMode');
 var hardMode = document.getElementById('hardMode');
 var easyMode = document.getElementById('easyMode');
+var easyHard = document.querySelector('.easyHard');
 var inputred = document.getElementById('red');
 var inputgreen = document.getElementById('green');
 var inputblue = document.getElementById('blue');
@@ -31,11 +32,12 @@ var randomWinMessege = [
     'We have a winner mate! You are becoming an expert!',
     'Some one is getting good Recognising RGBs! Great Work!',
 ];
+headOne.style.display = 'none';
 guesedColor.style.display = 'none';
 var redValue;
 var greenValue;
 var blueValue;
-
+colorDisplay.style.backgroundColor = 'lightgreen';
 allExpertElements.style.display = 'none';
 expertDisplay.style.display = 'none';
 colorDisplay.textContent = pickedColor;
@@ -71,39 +73,48 @@ resetbtn.addEventListener('click', function () {
     // var clickedColor = sqeur[i].style.backgroundColor;
     refactored();
     messageDisplay.textContent = '';
+    easyHard.style.display = 'block';
     resetbtn.textContent = 'New Color'
     for (var i = 0; i < squer.length; i++) {
         squer[i].style.backgroundColor = colors[i];
+        colorDisplay.style.backgroundColor = colors[i];
         // squer[i].style.display = 'block';
     }
 });
 easyMode.addEventListener('click', function () {
+    headOne.style.display = 'none';
     numOfSquer = 8;
     refactored();
-
+    easyHard.style.display = 'block';
     for (var i = 0; i < squer.length; i++) {
         if (colors[i]) {
             squer[i].style.backgroundColor = colors[i];
         } else {
             squer[i].style.display = 'none';
         }
+        colorDisplay.style.backgroundColor = colors[i];
     }
     reset.style.display = 'inline-block';
 });
 
 hardMode.addEventListener('click', function () {
     numOfSquer = 12;
+    headOne.style.display = 'none';
+    easyHard.style.display = 'block';
     refactored();
     reset.style.display = 'inline-block';
     for (var i = 0; i < squer.length; i++) {
         squer[i].style.backgroundColor = colors[i];
         squer[i].style.display = 'block';
+        colorDisplay.style.backgroundColor = colors[i];
     }
 });
 expertMode.addEventListener('click', function () {
+    easyHard.style.display = 'none';
+    headOne.style.display = 'block';
     randomMessege();
     console.log("firing expertmode event handler");
-    headOne.textContent = 'Type The Three Channal Values In The Box Below to represent the color shown'
+    // headOne.textContent = 'Type The Three Channal Values In The Box Below to represent the color shown'
     messageDisplay.textContent = '';
     headContainer.style.backgroundColor = '#aaa';
     reset.style.display = 'none';
@@ -112,7 +123,6 @@ expertMode.addEventListener('click', function () {
     headContainer.style.display = 'block';
     colorDisplay.textContent = '';
     colorSquer.style.backgroundColor = pickedColor;
-
     expertDisplay.style.display = 'block';
     allExpertElements.style.display = 'block';
     allColorsquers.style.display = 'none';
@@ -169,7 +179,6 @@ greenbtn.addEventListener('click', function () {
     expertMode.textContent = 'Play Again';
 });
 function refactored() {
-
     colors = generatRandomColor(numOfSquer);
     messageDisplay.textContent = '';
     headContainer.style.display = 'block';
@@ -178,7 +187,7 @@ function refactored() {
     allColorsquers.style.display = 'block';
     allExpertElements.style.display = 'none';
     pickedColor = randomColor();
-    headOne.textContent = 'Guese Which Color This ' + pickedColor + ' Represent';
+    colorDisplay.textContent =  pickedColor;
     colorDisplay.textContent = pickedColor;
     titleColor();
 }

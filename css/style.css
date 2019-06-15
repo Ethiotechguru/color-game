@@ -2,12 +2,23 @@ body {
     background-color: black;
     /*#aaa*/
     color     : white;
+    height: 100%;
     max-width : 100%;
     box-sizing: content-box;
+    border: 10px solid white;
+    border-radius: 20px;
+    outline: none;    ;
+    -webkit-border-radius: 20px    ;
+    -moz-border-radius: 20px    ;
+    -ms-border-radius: 20px    ;
+    -o-border-radius: 20px    ;
+    padding-bottom: 800px;
 }
 
-.containAllElements {
+
+.containAllElements1 {
     max-height: 600px;
+    margin-top: 200px;
 }
 
 .headOne {
@@ -265,10 +276,6 @@ span {
         font-size: 20px;
     }
 
-    body {
-        background-color: black;
-    }
-
     #container {
         max-width: 350px;
         margin   : 0 auto;
@@ -307,6 +314,14 @@ span {
     h1 {
         font-size: 2em;
     }
+    h2 {
+        font-size: 40px;
+    }
+    #colorDisplay{
+        background-color:lightgreen;
+        font-size: 1.2em;
+    }
+    
 
 }
 
