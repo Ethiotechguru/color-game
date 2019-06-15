@@ -21,8 +21,15 @@ body {
     margin-top: 200px;
 }
 
-.headOne {
+#colorDisplay{
+    font-size: 1.3em;
+}
+
+.headOne{
     text-transform: uppercase;
+}
+.easyHard{
+    font-size: 40px
 }
 
 .colorSquer {
@@ -294,7 +301,7 @@ span {
     }
 
     h2 {
-        font-size: 20px;
+        font-size: 25px;
     }
 }
 
@@ -317,10 +324,7 @@ span {
     h2 {
         font-size: 40px;
     }
-    #colorDisplay{
-        background-color:lightgreen;
-        font-size: 1.2em;
-    }
+    
     
 
 }
