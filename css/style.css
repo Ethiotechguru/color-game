@@ -27,13 +27,25 @@ body {
 
 .headOne{
     text-transform: uppercase;
+    font-size: 2em;
+    word-spacing: 10px;
+    text-shadow: 3px 3px black;
+    line-break: auto; 
 }
 .easyHard{
-    font-size: 40px
+    font-size: 40px;
+    text-shadow: -4px -5px black;
+}
+
+.spanMessege{
+    display: inline-block;
+    padding-top: 70px;
+    text-shadow: 3px -3px black;
+    font-size: 40px;
 }
 
 .colorSquer {
-    width                : 200px;
+    width                : 600px;
     height               : 200px;
     margin               : 0 auto;
     background-color     : purple;
@@ -74,17 +86,18 @@ body {
 }
 
 #container {
-    max-width: 400px;
+    max-width: 600px;
     margin   : 0 auto;
 
 }
 
 h1 {
-    max-width : 600px;
+    /* max-width : 600px; */
     margin    : 20px auto;
     text-align: center;
-    font-size : 4em;
+    font-size : 6em;
 }
+
 
 .item6 {
     padding: 7px;
@@ -190,11 +203,12 @@ span {
 }
 
 .inputcolor {
-    font-size: 20px;
-    width    : 150px;
+    font-size: 30px;
+    width: 200px;
+    padding: 15px 5px 15px;
+    text-align: center;
 }
 
-.inputcolor,
 .btntext {
     text-align: center;
     padding   : 15px;
@@ -202,14 +216,14 @@ span {
 
 .guesedColor {
     display         : inline-block;
-    width           : 200px;
+    width           : 500px;
     height          : 200;
     padding         : 40px;
     background-color: yellow;
     margin          : 0 auto;
     border-radius   : 20px;
     border          : 3px solid white;
-    font-size       : 1.5em;
+    font-size       : 2.0em;
     text-shadow     : 2px 2px black;
     margin          : 20px auto;
     text-transform  : uppercase;
@@ -248,7 +262,7 @@ span {
 }
 
 @media (max-width: 600px) {
-    body {
+    /* body {
         border               : 5px solid white;
         border-radius        : 20px;
         padding-bottom       : 100px;
@@ -256,7 +270,7 @@ span {
         -moz-border-radius   : 20px;
         -ms-border-radius    : 20px;
         -o-border-radius     : 20px;
-    }
+    } */
 
     .colorSquer {
         width : 200px;

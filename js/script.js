@@ -111,8 +111,6 @@
         easyHard.style.display = 'none';
         headOne.style.display = 'block';
         randomMessege();
-        console.log("firing expertmode event handler");
-        // headOne.textContent = 'Type The Three Channal Values In The Box Below to represent the color shown'
         messageDisplay.textContent = '';
         headContainer.style.backgroundColor = '#aaa';
         reset.style.display = 'none';
@@ -124,8 +122,7 @@
         expertDisplay.style.display = 'block';
         allExpertElements.style.display = 'block';
         allColorsquers.style.display = 'none';
-        expertMode.textContent = 'RGB Expert';
-
+        expertMode.textContent = 'New Color';
     });
     greenbtn.addEventListener('click', function () {
         guesedColor.style.display = 'block';
@@ -137,8 +134,6 @@
         inputred.value = '';
         // rgbExpert(); 
         if (pickedColor === rgbExpert()) {
-            ;
-            console.log("you are correct");
             guesedColor.textContent = randomMessege();
             guesedColor.style.backgroundColor = rgbExpert();
         }
@@ -156,13 +151,6 @@
             guesedColor.style.backgroundColor = rgbExpert();
             var colorblue = pickedColor;
             var arrOfPicked = colorblue.split(', ');
-            console.log(arrOfPicked);
-            console.log(typeof arrOfPicked[2]);
-            console.log("You are Wrong");
-            console.log('this is a red value ' + redValue);
-            console.log('this is a green value ' + greenValue);
-            console.log('this is a blue value ' + greenValue);
-
             for (var i = 0; i < arrOfPicked.length; i++) {
                 if (arrOfPicked[1] !== greenValue) {
                     guesedColor.textContent = 'You chose The Wrong Color! Hint, the Green Channal is ' + arrOfPicked[1];
@@ -171,7 +159,6 @@
                 } else if (arrOfPicked[0] !== 'rgb(' + redValue) {
                     guesedColor.textContent = 'You Chose The Wrong color! Try ' + pickedColor;
                 }
-
             }
         }
         expertMode.textContent = 'Play Again';
