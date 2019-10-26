@@ -16,6 +16,6 @@ value and prompted to try the third time. if the player still not able to get th
 three channel will be displayed on the screen and the player will be given a chance to enter the given value.
 ## Technology Used
 html, css and Javascript.
-
+[## Live Demo](https://ethiotechguru.github.io/color-game/)
 ## site I used to help me build this game
 mdn, stack over flow, w3 school, Udacity, Medium.com and lots of web site i don't remember.
